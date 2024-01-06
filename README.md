@@ -19,3 +19,7 @@ samples, guidance on mobile development, and a full API reference.
 Giriş Sayfası Tasarımında 'Haydi Başla' butonuna tıklandığında ana sayfaya yönlendirir.
 
 ![](https://github.com/Pusatthsyn/fitness_app/blob/main/assets/app_screes/Screenshot%202024-01-06%20142010.png)
+
+## Ana Sayfa
+An Sayfa tasarımı
+![](https://github.com/Pusatthsyn/fitness_app/blob/main/assets/app_screes/Screenshot%202024-01-06%20142024.png)
