@@ -8,7 +8,7 @@ class BodyIndexScreen extends StatefulWidget {
   State<BodyIndexScreen> createState() => _BodyIndexScreenState();
 }
 
-
+// body index text
 class _BodyIndexScreenState extends State<BodyIndexScreen> {
   bool isMale = true;
   bool isFemale = false;
