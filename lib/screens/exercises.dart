@@ -5,6 +5,7 @@ class ExerciseButtonConfig {
   final Color textColor;
   final double fontSize;
 
+// exercise text 
   ExerciseButtonConfig({
     required this.buttonColor,
     required this.textColor,
@@ -25,6 +26,7 @@ class ExerciseButton extends StatelessWidget {
     required this.config,
   });
 
+//  exercises
   @override
   Widget build(BuildContext context) {
     return _buildRoundedContainer(
