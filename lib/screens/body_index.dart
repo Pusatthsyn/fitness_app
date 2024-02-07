@@ -80,10 +80,10 @@ class _BodyIndexScreenState extends State<BodyIndexScreen> {
                           image: DecorationImage(
                             image: AssetImage(
                               isMale
-                                  ? 'assets/images/2.png'
+                                  ? 'assets/images/12.png'
                                   : isFemale
-                                      ? 'assets/images/1.png'
-                                      : 'assets/images/2.png',
+                                      ? 'assets/images/11.png'
+                                      : 'assets/images/12.png',
                             ),
                             fit: BoxFit.fitHeight,
                           ),
@@ -285,13 +285,11 @@ class _BodyIndexScreenState extends State<BodyIndexScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  const SizedBox(height: 10,
                   ),
                   Center(
                     child: Column(
                       children: [
-                        
                         const Text("0 - 18,49: Zayıf"),
                         const Text("18,5 - 24,99: Normal"),
                         const Text("25,0 - 29,99: Fazla Kilolu"),
@@ -303,6 +301,7 @@ class _BodyIndexScreenState extends State<BodyIndexScreen> {
                           'Vücut Kitle Endeksiniz: ${bmi.toStringAsFixed(2)}',
                           style: const TextStyle(fontSize: 20),
                         ),
+                        const SizedBox(height: 10),
                         if (0 < bmi && bmi < 18.5)
                           const Text(
                             'Vücut Kitle Durumunuz: Zayıf',style: TextStyle(color: Colors.green, fontSize: 18),
@@ -327,6 +326,8 @@ class _BodyIndexScreenState extends State<BodyIndexScreen> {
                           const Text(
                             'Vücut Kitle Durumunuz: Aşırı Şişman (Aşırı Obez) - III. Sınıf',style: TextStyle(color: Colors.red, fontSize: 18),
                           ),
+                          const SizedBox(height: 25,
+                  ),
                       ],
                     ),
                   ),

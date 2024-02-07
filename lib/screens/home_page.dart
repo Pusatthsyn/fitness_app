@@ -1,3 +1,5 @@
+import 'package:fitness_app/pages/home_exercises.dart';
+import 'package:fitness_app/pages/gym_exercises.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,8 +30,11 @@ class HomePage extends StatelessWidget {
               height: 250,
               child: ElevatedButton(
                 onPressed: () {
-                  // Button 1 pressed
-                },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const MyHomePage()),
+                      );
+                    },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.black, backgroundColor: Colors.amber, // Buton üzerindeki metin rengi
                   shape: RoundedRectangleBorder(
@@ -49,8 +54,11 @@ class HomePage extends StatelessWidget {
               height: 250,
               child: ElevatedButton(
                 onPressed: () {
-                  // Button 2 pressed
-                },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const HomeExercises()),
+                      );
+                    },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.black, backgroundColor: Colors.amber, // Buton üzerindeki metin rengi
                   shape: RoundedRectangleBorder(

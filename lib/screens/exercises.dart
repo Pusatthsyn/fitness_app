@@ -1,3 +1,13 @@
+import 'package:fitness_app/all_exercises/barfiks.dart';
+import 'package:fitness_app/all_exercises/bench_press.dart';
+import 'package:fitness_app/all_exercises/bent_bar_seated_cable.dart';
+import 'package:fitness_app/all_exercises/deadlift.dart';
+import 'package:fitness_app/all_exercises/lunge.dart';
+import 'package:fitness_app/all_exercises/mekik.dart';
+import 'package:fitness_app/all_exercises/overhead_press.dart';
+import 'package:fitness_app/all_exercises/plank.dart';
+import 'package:fitness_app/all_exercises/push_up.dart';
+import 'package:fitness_app/all_exercises/squat.dart';
 import 'package:flutter/material.dart';
 
 class ExerciseButtonConfig {
@@ -127,19 +137,25 @@ class ExercisesPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ExerciseButton(
-                    text: 'Halter Kaldırma',
-                    imagePath: 'assets/images/ex1.png',
+                    text: 'Squat',
+                    imagePath: 'assets/images/1.png',
                     onPressed: () {
-                      // Button 1 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Squat()), 
+                      );
                     },
                     config: buttonConfig,
                   ),
                   const SizedBox(width: 16),
                   ExerciseButton(
-                    text: 'Kas Uzatma',
-                    imagePath: 'assets/images/ex2.png',
+                    text: 'Deadlift',
+                    imagePath: 'assets/images/2.png',
                     onPressed: () {
-                      // Button 2 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Deadlift()), 
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -149,19 +165,25 @@ class ExercisesPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ExerciseButton(
-                    text: 'Çömelme',
-                    imagePath: 'assets/images/ex3.png',
+                    text: 'Plank',
+                    imagePath: 'assets/images/3.png',
                     onPressed: () {
-                      // Button 3 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Plank()), 
+                      );
                     },
                     config: buttonConfig,
                   ),
                   const SizedBox(width: 16),
                   ExerciseButton(
-                    text: 'Göğüs Pres',
-                    imagePath: 'assets/images/ex4.png',
+                    text: 'Bench Pres',
+                    imagePath: 'assets/images/4.png',
                     onPressed: () {
-                      // Button 4 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BenchPress()),
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -171,19 +193,25 @@ class ExercisesPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ExerciseButton(
-                    text: 'Baş Üştü Pres',
-                    imagePath: 'assets/images/ex5.png',
+                    text: "Push-up( Şınav )",
+                    imagePath: 'assets/images/5.png',
                     onPressed: () {
-                      // Button 5 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const PushUp()),
+                      );
                     },
                     config: buttonConfig,
                   ),
                   const SizedBox(width: 16),
                   ExerciseButton(
-                    text: 'Kafatası Kırıcı',
-                    imagePath: 'assets/images/ex6.png',
+                    text: 'Barfiks',
+                    imagePath: 'assets/images/6.png',
                     onPressed: () {
-                      // Button 6 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Barfiks()),
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -193,19 +221,54 @@ class ExercisesPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ExerciseButton(
-                    text: 'Sırt Çekme',
-                    imagePath: 'assets/images/ex7.png',
+                    text: 'Bent Bar Seated Cable Row',
+                    imagePath: 'assets/images/7.png',
                     onPressed: () {
-                      // Button 5 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BentBarSeatedCable()),
+                      );
                     },
                     config: buttonConfig,
                   ),
                   const SizedBox(width: 16),
                   ExerciseButton(
-                    text: 'Koşu Bandı',
-                    imagePath: 'assets/images/ex8.png',
+                    text: 'Mekik',
+                    imagePath: 'assets/images/8.png',
                     onPressed: () {
-                      // Button 6 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Mekik()),
+                      );
+                    },
+                    config: buttonConfig,
+                  ),
+                  
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ExerciseButton(
+                    text: 'Ovehead Press',
+                    imagePath: 'assets/images/9.png',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const OveheadPress()),
+                      );
+                    },
+                    config: buttonConfig,
+                  ),
+                  const SizedBox(width: 16),
+                  ExerciseButton(
+                    text: 'Lunge',
+                    imagePath: 'assets/images/10.png',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Lunge()),
+                      );
                     },
                     config: buttonConfig,
                   ),

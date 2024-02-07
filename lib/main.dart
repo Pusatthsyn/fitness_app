@@ -1,13 +1,16 @@
+import 'package:fitness_app/data/app_data.dart';
 import 'package:fitness_app/login_page.dart';
 import 'package:fitness_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(create: (context) =>AppData(),
+  child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

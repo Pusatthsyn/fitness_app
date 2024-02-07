@@ -1,3 +1,7 @@
+import 'package:fitness_app/weekly_plans/first_week.dart';
+import 'package:fitness_app/weekly_plans/fourth_week.dart';
+import 'package:fitness_app/weekly_plans/second_week.dart';
+import 'package:fitness_app/weekly_plans/third_week.dart';
 import 'package:flutter/material.dart';
 
 class WeeklyButtonConfig {
@@ -28,7 +32,7 @@ class WeeklyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return _buildRoundedContainer(
       width: 360,
-      height: 180,
+      height: 100,
       onPressed: onPressed,
       child: Center(
         child: Text(
@@ -80,7 +84,7 @@ class WeeklyPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final buttonConfig = WeeklyButtonConfig(
-      buttonColor: Colors.grey,
+      buttonColor: Colors.amber,
       textColor: Colors.black,
       fontSize: 14,
     );
@@ -98,7 +102,7 @@ class WeeklyPlan extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[400],
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -108,9 +112,12 @@ class WeeklyPlan extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   WeeklyButton(
-                    text: '1. Hafta',
+                    text: '1. Hafta Egzersizleri',
                     onPressed: () {
-                      // Button 1 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FirstWeek()),
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -120,9 +127,12 @@ class WeeklyPlan extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   WeeklyButton(
-                    text: '2. Hafta',
+                    text: '2. Hafta Egzersizleri',
                     onPressed: () {
-                      // Button 2 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SecondWeek()),
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -132,9 +142,12 @@ class WeeklyPlan extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   WeeklyButton(
-                    text: '3. Hafta',
+                    text: '3. Hafta Egzersizleri',
                     onPressed: () {
-                      // Button 3 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ThirddWeek()),
+                      );
                     },
                     config: buttonConfig,
                   ),
@@ -144,9 +157,12 @@ class WeeklyPlan extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   WeeklyButton(
-                    text: '4. Hafta',
+                    text: '4. Hafta Egzersizleri',
                     onPressed: () {
-                      // Button 4 pressed
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FourthdWeek()),
+                      );
                     },
                     config: buttonConfig,
                   ),

@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:fitness_app/screens/body_index.dart';
 import 'package:fitness_app/screens/exercises.dart';
 import 'package:fitness_app/screens/home_page.dart';
-import 'package:fitness_app/screens/nutrition.dart';
 import 'package:fitness_app/screens/weekly_plan.dart';
 import 'package:fitness_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     const HomePage(),
     const ExercisesPage(),
     const WeeklyPlan(),
-    const Nutrition(),
+    const BodyIndexScreen(),
   ];
 
   @override
@@ -31,30 +30,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const BodyIndexScreen()),
-          );
-        },
-        child: SizedBox(
-          width: 70,
-          height: 70,
-          child: Container(
-            width: 65,
-            height: 65,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(colors: AppColors.primaryG),
-                borderRadius: BorderRadius.circular(35),
-                boxShadow: const [
-                  BoxShadow(color: Colors.black12, blurRadius: 2)
-                ]),
-            child: const Icon(Icons.boy_outlined,
-                color: AppColors.whiteColor, size: 32),
-          ),
-        ),
-      ),
       body: IndexedStack(
         index: selectTab,
         children: _widgetOptions,
@@ -74,55 +49,68 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     offset: Offset(0, -8))
               ]),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              TabButton(
-                  icon: "assets/icons/3.png",
-                  selectIcon: "assets/icons/4.png",
-                  isActive: selectTab == 0,
-                  onTap: () {
-                    if (mounted) {
-                      setState(() {
-                        selectTab = 0;
-                      });
-                    }
-                  }),
-              TabButton(
-                  icon: "assets/icons/1.png",
-                  selectIcon: "assets/icons/2.png",
-                  isActive: selectTab == 1,
-                  onTap: () {
-                    if (mounted) {
-                      setState(() {
-                        selectTab = 1;
-                      });
-                    }
-                  }),
-              const SizedBox(width: 30),
-              TabButton(
-                  icon: "assets/icons/5.png",
-                  selectIcon: "assets/icons/6.png",
-                  isActive: selectTab == 2,
-                  onTap: () {
-                    if (mounted) {
-                      setState(() {
-                        selectTab = 2;
-                      });
-                    }
-                  }),
-              TabButton(
-                  icon: "assets/icons/19.png",
-                  selectIcon: "assets/icons/20.png",
-                  isActive: selectTab == 3,
-                  onTap: () {
-                    if (mounted) {
-                      setState(() {
-                        selectTab = 3;
-                      });
-                    }
-                  }),
-            ],
-          ),
+  mainAxisAlignment: MainAxisAlignment.spaceAround,
+  children: [
+    Expanded(
+      child: TabButton(
+        icon: "assets/icons/3.png",
+        selectIcon: "assets/icons/4.png",
+        isActive: selectTab == 0,
+        onTap: () {
+          if (mounted) {
+            setState(() {
+              selectTab = 0;
+            });
+          }
+        },
+      ),
+    ),
+    Expanded(
+      child: TabButton(
+        icon: "assets/icons/1.png",
+        selectIcon: "assets/icons/2.png",
+        isActive: selectTab == 1,
+        onTap: () {
+          if (mounted) {
+            setState(() {
+              selectTab = 1;
+            });
+          }
+        },
+      ),
+    ),
+    const SizedBox(width: 30),
+    Expanded(
+      child: TabButton(
+        icon: "assets/icons/5.png",
+        selectIcon: "assets/icons/6.png",
+        isActive: selectTab == 2,
+        onTap: () {
+          if (mounted) {
+            setState(() {
+              selectTab = 2;
+            });
+          }
+        },
+      ),
+    ),
+    Expanded(
+      child: TabButton(
+        icon: "assets/icons/7.png",
+        selectIcon: "assets/icons/8.png",
+        isActive: selectTab == 3,
+        onTap: () {
+          if (mounted) {
+            setState(() {
+              selectTab = 3;
+            });
+          }
+        },
+      ),
+    ),
+  ],
+),
+
         ),
       ),
     );
